@@ -1,0 +1,543 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Online Application</title>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="styles/smart_wizard.css" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.smartWizard-2.0.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // Smart Wizard 	
+      $('#wizard').smartWizard();
+      function onFinishCallback() {
+        $('#wizard').smartWizard('showMessage', 'Finish Clicked');
+      }
+    });
+  </script>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <?php include("../header.php"); ?>
+
+  <div class="container">
+    <!-- Content -->
+    <div id="wizard" class="swMain">
+      <ul>
+        <li>
+          <a href="#step-1">
+            <span class="stepNumber">1</span>
+            <span class="stepDesc">
+              Personal
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#step-2">
+            <span class="stepNumber">2</span>
+            <span class="stepDesc">
+              Financial
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#step-3">
+            <span class="stepNumber">3</span>
+            <span class="stepDesc">
+              Complete
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div id="step-1">
+        <fieldset>
+          <legend class="fs-title">
+            Customer Information
+          </legend>
+
+          <div class="row">
+            <h3 class="fs-subtitle" style="margin-top: 0;">Account</h3>
+            <div class="col-md-12">
+
+              <label for="" class="col-md-5">
+                <span>First Name</span>
+                <input type="text" name="fname" class="" />
+              </label>
+
+              <label for="" class="col-md-5">
+                <span>Last Name</span>
+                <input type="text" name="lname" class="" />
+              </label>
+
+              <label for="" class="col-md-3">
+                <span>Email Address</span>
+                <input type="email" name="email" />
+              </label>
+
+              <label for="" class="col-md-3">
+                <span>Email Address Confirm</span>
+                <input type="email" name="emailconfirm" />
+              </label>
+
+              <label for="" class="col-md-3">
+                <span>Password</span>
+                <input type="password" name="pass" />
+              </label>
+
+              <label for="" class="col-md-3">
+                <span>Confirm Password</span>
+                <input type="password" name="passconfirm" />
+              </label>
+              <div class="clearfix"></div>
+
+              <h3 class="fs-subtitle">Personal</h3>
+              <label for="" class="col-md-6">
+                <span>Primary Phone #</span>
+                <input type="tel" name="Primary Phone" data-mask="(999)999-9999" class="">
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>Secondary Phone #</span>
+                <input type="text" name="Secondary Phone" data-mask="(999)999-9999" class="" />
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>SSN</span>
+                <input type="text" name="ssn" class="" data-mask="999-99-9999" />
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>Confirm SSN</span>
+                <input type="text" name="ssnconfirm" class="" data-mask="999-99-9999" />
+              </label>
+              <label for="" class="col-md-6">
+                <span>Driver's License</span>
+                <input type="text" name="driverslicense" class="" />
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>License State</span>
+              <select name="licensest" class="dropdown input-md form-control">
+                <option>Select Your State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+
+              </select>
+              </label>
+
+              <div class="clearfix"></div>
+              <label for="" class="col-md-6">
+                <span>Date of Birth</span>
+                <input type="text" id="datepicker" name="DOB" class="" />
+              </label>
+            </div>
+
+            <div class="col-md-12">
+              <h3 class="fs-subtitle">Address</h3>
+              <label for="" class="col-md-6">
+                <span>Address</span>
+                <input type="text" name="address" class="" />
+              </label>
+              <label for="" class="col-md-6">
+                <span>Apt, Ste, Bldg.</span>
+                <input type="text" name="apt" class="" />
+              </label>
+              <label for="" class="col-md-6">
+                <span>Zip Code</span>
+                <input name="zip" type="text" class="" value="37421" />
+              </label>
+              <label for="" class="col-md-6" style="padding: 15px 0;">
+                <span>City &amp; State</span>
+                <select name="licensest" class="dropdown input-md form-control">
+                <option>Select Your State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+
+              </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="space"></div>
+          <div class="clearfix"></div>
+
+        </fieldset>
+        <div class="clearfix"></div>
+      </div>
+      <div id="step-2">
+        <fieldset>
+
+          <legend class="fs-title">
+            Financial Information
+
+          </legend>
+
+          <div class="row">
+            <h3 class="fs-subtitle text-center" style="margin-top:0;">Income</h3>
+            <div class="col-md-12">
+
+              <label for="" class="col-md-6">
+                <span>Income Source</span>
+                <select class="input-md form-control">
+                  <option>Select</option>
+                  <option value="Disibility">Disibility</option>
+                  <option value="Employed">Employed</option>
+                  <option value="Other">Other</option>
+                  <option value="Pension">Pension</option>
+                  <option value="Social Security">Social Security</option>
+                </select>
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>How do you get paid?</span>
+                <select class="input-md form-control">
+                  <option>Select</option>
+                  <option value="Direct Deposit">Direct Deposit</option>
+                  <option value="Paper Check">Paper Check</option>
+                  <option value="Cash">Cash</option>
+
+                </select>
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>Gross Pay</span>
+                <input type="text" name="Gross Pay" id="currency" class="" />
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>How often are you paid?</span>
+                <select class="input-md form-control">
+                  <option>Select</option>
+                  <option value="Weekly">Weekly</option>
+                  <option value="Bi-Weekly">Bi-Weekly</option>
+                  <option value="Semi-Monthly">Semi-Monthly</option>
+                  <option value="Monthly">Monthly</option>
+
+                </select>
+              </label>
+
+            </div>
+
+            <div class="col-md-12">
+
+              <h3 class="fs-subtitle text-center" style="margin-top:0;">Employment</h3>
+
+              <label for="" class="col-md-6">
+                <span>Employer Name</span>
+                <input type="text" name="Employer" class="" />
+              </label>
+              <label for="" class="col-md-6">
+                <span>Job Title</span>
+                <input type="text" name="Job Title" class="" />
+              </label>
+              <label for="" class="col-md-6">
+                <span>Work Phone</span>
+
+                <input type="text" name="Work Phone" class="" />
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>Extension</span>
+                <input type="text" name="Extension" class="" />
+              </label>
+
+            </div>
+
+          </div>
+
+          <div class="clearfix"></div>
+          <div class="row">
+            <h3 class="fs-subtitle text-center">Banking </h3>
+
+            <div class="col-md-12">
+
+              <label for="" class="col-md-6">
+                <span>Bank Account Type</span>
+
+                <select class="input-md form-control">
+                  <option>Select</option>
+                  <option value="Checking" selected="selected">Checking</option>
+                  <option value="Savings">Savings</option>
+                </select>
+              </label>
+
+              <label for="" class="col-md-6">
+                <span>Bank Name</span>
+
+                Bank of America, LLC, ABC
+              </label>
+            </div>
+
+            <div class="col-md-6">
+              <span></span>
+              <span class="checktitle">Routing Number</span>
+              <img src="images/img-check1.jpg" class="img-responsive checkimg pull-right" />
+              <label for="" class="col-md-12">
+                <span style="float:left; width:150px;">Routing #</span>
+                <input type="text" name="Routing Number" class="" />
+              </label>
+
+              <label for="" class="col-md-12">
+                <span style="float:left; width:150px;">Confirm Routing #</span>
+                <input type="text" name="Confirm Routing Number" class="" />
+              </label>
+
+            </div>
+            <div class="col-md-6">
+              <span></span>
+              <span class="checktitle">Account Number</span>
+              <img src="images/img-check2.jpg" class="img-responsive checkimg" />
+
+              <label for="" class="col-md-12">
+                <span style="float:left; width:150px;">Account #</span>
+                <input type="text" name="Routing Number" class="" />
+              </label>
+
+              <label for="" class="col-md-12">
+                <span style="float:left; width:150px;">Confirm Account #</span>
+                <input type="text" name="Routing Number" class="" />
+              </label>
+
+            </div>
+
+          </div>
+          <div class="clearfix"></div>
+          <div class="space"></div>
+        </fieldset>
+      </div>
+      <div id="step-3">
+        <fieldset>
+          <legend class="fs-title">
+            E-Signature
+          </legend>
+
+          <div class="row">
+            <h3 class="fs-subtitle text-center" style="margin-top:0;">Consent &amp; Disclosure</h3>
+            <div class="col-md-12">
+              <!-- Disclosure Accordions -->
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        State Disclosure
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                      non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                      anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                      excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                      nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        Consent for Electronic Records
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                      non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                      anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                      excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                      nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        Privacy Policy
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                      non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                      anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                      excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                      nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Militiary Disclosure -->
+              <div class="mildis row">
+                <h3 class="fs-subtitle text-center">Military Disclosure</h3>
+                <div class="col-md-12">
+                  <p class="">Federal law provides important protections to active duty members of the Armed Forces and their dependents.
+                    To ensure that these protections are provided to eligible applicants, indicate
+                    <strong>Yes</strong> or
+                    <strong>No</strong> to the following statement:</p>
+                </div>
+                <div class="milselect col-md-12">
+                  <label class="col-md-12">
+                    <p>
+                      <strong>I am</strong> a regular or reserve member of the Army, Navy, Marine Corps, Air Force, or Coast Guard,
+                      serving on active duty under a call or order that does not specify a period of 30 days or fewer (or
+                      a dependent of such member). A dependent of a member of the Armed Forces on active duty as described
+                      above is the member's spouse, the member's child under the age of eighteen years old, or an individual
+                      for whom the member provided more than one-half of his/her financial support for 180 days immediately
+                      preceding today's date.</p>
+                    <div class="clearfix"></div>
+                    <div class="col-md-12 lead">
+                      <div class="text-center">
+                        <label>
+                          <label>
+                            <input class="input-md" type="radio" name="chk_military" value="No" /> No
+                          </label>
+                          &nbsp;
+                          <input class="input-md" type="radio" name="chk_military" value="Yes" /> Yes
+                        </label>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12">
+                  <div class="alert alert-danger">
+                    <p>
+                      <strong>Fraud and Identity Theft:</strong> Providing false or fraudulent information, including but not limited
+                      to the use of false or altered documents is a crime. We check your details with fraud prevention agencies.
+                      If false or inaccurate information is provided by you and we suspect any unlawful activity such as
+                      fraud or fraud is identified, this will be recorded, and we may pass details to fraud prevention agencies.
+                      We will also work with law enforcement agencies for possible investigation and prosecution.</p>
+                  </div>
+                  <p>LBP/CIC-Military-Disc-010111</p>
+                </div>
+              </div>
+              <h3 class="fs-subtitle text-center" style="margin-top:0;">Promotions &amp; Codes</h3>
+              <label class="col-md-6">
+                <span>Promo Code</span>
+                <input type="text" name="fname" class="" />
+              </label>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="space"></div>
+        </fieldset>
+</div>
+</div>
+</div>
+<?php include("../footer-legal.php"); ?>  
+
+</body>
+
+</html>
